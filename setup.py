@@ -16,6 +16,13 @@ setup(
     license='BSD',
     py_modules=['intake_iris'],
     packages=find_packages(),
+    entry_points={
+        'intake.drivers': [
+            'netcdf = intake_iris.netcdf:NetCDFSource',
+            'grib = intake_iris.grib:GRIBSource',
+            'remote-iris = intake_iris.xarray_container:RemoteXarray',
+        ]
+    },
     package_data={'': ['*.csv', '*.yml', '*.html']},
     include_package_data=True,
     install_requires=requires,
