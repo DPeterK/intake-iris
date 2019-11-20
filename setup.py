@@ -9,10 +9,10 @@ setup(
     name='intake_iris',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description='iris plugins for Intake',
+    description='Iris plugins for Intake',
     url='https://github.com/informatics-lab/intake-iris',
-    maintainer='Jacob Tomlinson',
-    maintainer_email='jacob.tomlinson@informaticslab.co.uk',
+    maintainer='Peter Killick',
+    maintainer_email='peter.killick@informaticslab.co.uk',
     license='BSD',
     py_modules=['intake_iris'],
     packages=find_packages(),
@@ -20,7 +20,6 @@ setup(
         'intake.drivers': [
             'netcdf = intake_iris.netcdf:NetCDFSource',
             'grib = intake_iris.grib:GRIBSource',
-            'remote-iris = intake_iris.xarray_container:RemoteXarray',
         ]
     },
     package_data={'': ['*.csv', '*.yml', '*.html']},
